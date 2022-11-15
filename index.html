@@ -23,7 +23,7 @@ title="" style="color:#fff;padding:2rem;">Link for test knife of cursor</a>
     <style>
         body {cursor: url('dm-knife.svg') 2 2, auto;background-color:#000;height:100vh;width:100%;padding:5rem;overflow-x: hidden;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
         a:hover {cursor: url('dm-knife-stab.svg') 2 2, auto;color:#AF0D1B !important;}
-
+        #slash:hover {cursor: url('dm-knife-stab.svg') 2 2, auto;color:#AF0D1B !important;}
         #slash {
             width: 0px;
             height: 0px;    
@@ -39,15 +39,15 @@ title="" style="color:#fff;padding:2rem;">Link for test knife of cursor</a>
             z-index: 9;
         }
         #slash:focus-visible {background-color:red;}
-        #slash.show {height:30px;width:30px;background-image:url(slash.png);}
+        #slash.show {height:25px;width:50px;background-image:url(slash.png);}
 
         .tv-container {display:flex;justify-content: center;}
     </style>
     <script>
         var f = document.getElementById('slash');
         document.addEventListener('click', function(ev){
-            f.style.left = (ev.clientX-30)+'px';
-            f.style.top = (ev.clientY)-70+'px';
+            f.style.left = (ev.clientX-40)+'px';
+            f.style.top = (ev.clientY)-64+'px';
             f.classList.add('show');
             
         },false);
