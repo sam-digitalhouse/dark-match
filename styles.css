@@ -1,0 +1,56 @@
+body {
+  cursor: url("dm-knife.svg") 2 2, auto;
+  background-color: #000;
+  height: 100vh;
+  width: 100%;
+  padding: 5rem;
+  overflow-x: hidden;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a:hover {
+  cursor: url("dm-knife-stab.svg") 2 2, auto;
+  color: #AF0D1B !important;
+}
+
+#slash:hover {
+  cursor: url("dm-knife-stab.svg") 2 2, auto;
+  color: #AF0D1B !important;
+}
+
+#slash {
+  width: 0px;
+  height: 0px;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  padding-top: 35px;
+  -webkit-transform: translate(30px, 30px);
+          transform: translate(30px, 30px);
+  position: absolute;
+  background-size: contain;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0s;
+  transition: all 0s;
+  z-index: 9;
+}
+
+#slash:focus-visible {
+  background-color: red;
+}
+
+#slash.show {
+  height: 40px;
+  width: 50px;
+  background-image: url(slash.png);
+}
+
+.tv-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=styles.css.map */
