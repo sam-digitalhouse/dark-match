@@ -1,0 +1,119 @@
+body {background-color:#000;height:100vh;width:100%;padding:0rem 5rem;overflow-x: hidden;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+.finger-print {}
+.knife {cursor: url('dm-knife.svg') 2 2, auto;}
+.knife a:hover {cursor: url('dm-knife-stab.svg') 2 2, auto;color:#AF0D1B !important;}
+.knife #slash:hover {cursor: url('dm-knife-stab.svg') 2 2, auto;color:#AF0D1B !important;}
+
+#slash {
+    width: 0px;
+    height: 0px;    
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    padding-top:35px;
+    transform:translate(30px,30px);
+    position: absolute;
+    background-size:contain;
+    top: 0;
+    left: 0;
+    transition:  all 0s;
+    z-index: 9;
+}
+
+
+    #print {
+        width: 0px;
+        height: 0px;    
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        padding-top:0;
+        transform:translate(30px,30px);
+        position: absolute;
+        background-size:contain;
+        top: 0;
+        left: 0;
+        transition:  all 0s;
+        z-index: 9;
+    }
+  
+.knife #slash:focus-visible {background-color:red;}
+.knife #slash.show {height:40px;width:50px;background-image:url(slash.png);}
+#print.show {height:180px;width:130px;}
+#print.finger-1 {background-image:url(FingerPrint.svg);}
+#print.finger-2 {background-image:url(FingerPrint2.svg);}
+.tv-container {display:flex;justify-content: center;}
+
+a.hover-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left:0;
+}
+
+  .grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    position:absolute;
+  }
+  
+  .grid-item {
+    padding: 20px;
+    text-align: center;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    gap:1rem;
+  }
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 65px;
+    height: 34px;
+    z-index: 99;
+    color:#AF0D1B;
+  }
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #30363a ;
+  }
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  .slider.round {
+    border-radius: 34px;
+  }
+  .slider.round:before {
+    border-radius: 50%;
+  }
